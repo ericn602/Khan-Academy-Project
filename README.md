@@ -46,5 +46,7 @@ will create 10 nodes, with edges between 1,2 2,3 3,4. In Total Infection mode, t
 	* This problem can be model using the Knapsack problem, taught in CS 170 at UC Berkeley for me. If you would like more information on the Knapsack problem, please check out the book used for CS 170 at http://beust.com/algorithms.pdf. Page 172 has information regarding the Knapsack problem.
 	* However there is a downside to using Dynamic Programming in order to find the infected nodes. We know that the runtime of the Knapsack algorithm is O(nW), where, in our case, W is the number of nodes we want to infect. Knapsack is an NP-Complete problem, since W can be arbitrarily big. Thus, although this solution is elegant, it probably won't scale too well as the number of desired infections skyrockets.
 
+## Feedback
 
+Thank you for allowing me an attempt at completing this challenge. I've never had an project-based interview before and I have to say that the level of freedom given upon the interpretation of Limited Infections gave me the opportunity to model the problem using what I've learned fairly recently. Khan Academy's proclivity towards project based interviews really gave me the ability to tackle a problem that I'd consider to be more realistic than typical interview questions. I appreciate the time and look forward to hearing from you again in the future. Feel free to contact me at enguyen@berkeley.edu for any further questions.
 
