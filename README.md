@@ -3,7 +3,7 @@
 ## Requirements
 Please make sure to download the dependencies needed in order to run the file. 
 - Python (at least 2.7)
-- networkx and matplotlib, install by running 'pip install networkx matplotlib'
+- networkx and matplotlib, install by running `pip install networkx matplotlib`
 
 ## How to run
 There are 4 different modes that you can run the program with.
@@ -35,3 +35,16 @@ For Example, the file
 4
 ```
 will create 10 nodes, with edges between 1,2 2,3 3,4. In Total Infection mode, the starting infected node will be node 4. In Limited Infection mode, we will try to infect exactly 4 nodes if possible.
+
+## Overview of the project
+* Total Infections
+	* Implementation Total Infections was fairly simple. We know that given a starting node, to find its connected component, we can simply run DFS or BFS. In our case, BFS was used in order to find the connected component of our starting node.
+* Limited Infections
+	* I interpreted Limit Infections as the following. Given the number of nodes we want to infect, try to infect that many nodes and if impossible, try to infect as many nodes as possible up to the number of nodes we want to infect. In a way, the given number of nodes is the upper bounds on how many nodes we can infect.
+	* We can utilize that fact that when we infect a node, we basically infect its whole connect components. If we didn't do this, then there would always be a violation where a coach and a student aren't utilizing the same site.
+	* Knowing this, our goal is to basically find all connected components such that the sum of nodes in these connected components is equal to or less than the desire number of nodes we want to infect.
+	* This problem can be model using the Knapsack problem, taught in CS 170 at UC Berkeley for me. If you would like more information on the Knapsack problem, please check out the book used for CS 170 at http://beust.com/algorithms.pdf. Page 172 has information regarding the Knapsack problem.
+	* However there is a downside to using Dynamic Programming in order to find the infected nodes. We know that the runtime of the Knapsack algorithm is O(nW), where, in our case, W is the number of nodes we want to infect. Knapsack is an NP-Complete problem, since W can be arbitrarily big. Thus, although this solution is elegant, it probably won't scale too well as the number of desired infections skyrockets.
+
+
+
