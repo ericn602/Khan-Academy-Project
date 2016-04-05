@@ -14,6 +14,7 @@ There are 4 different modes that you can run the program with.
 	* To run Limited Infections on a randomly generated graph with visualization, execute the following command, `python infection.py -r limited_infection NUMBER_OF_NODES NUMBER_OF_EDGES NUMBER_OF_NODES_INFECTED`, where `NUMBER_OF_NODES` is the desired number of nodes and `NUMBER_OF_EDGES` is the desired number of edges and `NUMBER_OF_NODES_INFECTED` is the number of nodes you want infected in this randomly generated graph. Limited Infections will try to get as close as possible to `NUMBER_OF_NODES_INFECTED` as possible if that infection is impossible.
 	* To run Limited Infections on a designated user-implemented graph file, execute the following command, `python infection.py limited_infection FILE_NAME`, where `FILE_NAME` is the name of the file of the custom graph.
 * In both instances, red nodes will represent the infected nodes.
+
 ## How to create a custom graph file
 ```
 NUMBER_OF_NODES
